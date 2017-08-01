@@ -21,7 +21,7 @@ public class EmailServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		resp.setContentType("text/html");
+		resp.setContentType("text/html;charset=UTF-8");
 		
 		
 		String cep = req.getParameter("cep");
@@ -43,12 +43,12 @@ public class EmailServlet extends HttpServlet {
 	        email.setAssunto("Envio de Email Usando Servlet JSON");
 	        email.setEmailDestino(emailDestino);
 	        email.setNomeDestino(nomeDestino);
-	        email.setEmailOrigem("joaorobertof@gmail.com");
-	        email.setNomeOrigem("João Roberto");
+	        email.setEmailOrigem("");
+	        email.setNomeOrigem("");
 	        String msg = "<html><p>"+"<h3>Retorno Cep: "+cep+"</h3>"+"<p>Tipo Logradouro: "+tipoDeLogradouro+"</p>"+"<p>Logradouro: "+logradouro+"</p>"+"<p>Bairro: "+bairro+"</p>"+"<p>Cidade: "+cidade+"</p>"+"<p>Estado: "+estado+"</p>"+"</p></html>";
 	        email.setMsg(msg);
-            email.setUserName("joaorobertof@gmail.com");
-            email.setPassword("swUxa5u-ud");
+            email.setUserName("");
+            email.setPassword("");
 	        try {
 	            email.CriarEmail(true);
 	            

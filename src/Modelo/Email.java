@@ -130,7 +130,8 @@ public class Email {
         email.addTo(this.emailDestino, this.nomeDestino);
         email.setFrom(this.emailOrigem, this.nomeOrigem);
         email.setSubject(this.assunto);
- 
+        email.setStartTLSRequired(true);
+        
         // configura a mensagem para o formato HTML
         email.setHtmlMsg(this.msg);
  
