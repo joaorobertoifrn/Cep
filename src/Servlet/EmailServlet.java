@@ -43,12 +43,12 @@ public class EmailServlet extends HttpServlet {
 	        email.setAssunto("Envio de Email Usando Servlet JSON");
 	        email.setEmailDestino(emailDestino);
 	        email.setNomeDestino(nomeDestino);
-	        email.setEmailOrigem("");
-	        email.setNomeOrigem("");
+	        email.setEmailOrigem("alunoifrnparnamirim@gmail.com");
+	        email.setNomeOrigem("Projeto CEP");
 	        String msg = "<html><p>"+"<h3>Retorno Cep: "+cep+"</h3>"+"<p>Tipo Logradouro: "+tipoDeLogradouro+"</p>"+"<p>Logradouro: "+logradouro+"</p>"+"<p>Bairro: "+bairro+"</p>"+"<p>Cidade: "+cidade+"</p>"+"<p>Estado: "+estado+"</p>"+"</p></html>";
 	        email.setMsg(msg);
-            email.setUserName("");
-            email.setPassword("");
+            email.setUserName("alunoifrnparnamirim@gmail.com");
+            email.setPassword("T&Chn1c0s");
 	        try {
 	            email.CriarEmail(true);
 	            
